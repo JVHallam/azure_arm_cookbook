@@ -9,6 +9,21 @@
 }
 ```
 
+## Blank Storage Account
+
+```json
+{
+  "type": "Microsoft.Storage/storageAccounts",
+  "apiVersion": "2019-04-01",
+  "name": "st-name",
+  "location": "UK South",
+  "sku": {
+    "name": "Standard_LRS"
+  },
+  "kind": "StorageV2"
+}
+```
+
 ## SQL Server
 ```json
 {
