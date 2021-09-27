@@ -24,6 +24,19 @@
 }
 ```
 
+## Blank Storage Container
+```json
+{
+    "type": "blobServices/containers",
+    "apiVersion": "2021-02-01",
+    "name": "default/storagecontjvh1",
+    "dependsOn" : [
+        "[parameters('storageName')]"
+    ]
+}
+```
+
+
 ## SQL Server
 ```json
 {
