@@ -29,9 +29,9 @@
 {
     "type": "blobServices/containers",
     "apiVersion": "2021-02-01",
-    "name": "default/storagecontjvh1",
+    "name": "default/sc-name",
     "dependsOn" : [
-        "[parameters('storageName')]"
+        "ParentStorageAccountsName"
     ]
 }
 ```
