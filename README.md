@@ -37,7 +37,6 @@
 }
 ```
 
-
 ## SQL Server
 ```json
 {
@@ -67,4 +66,21 @@
         ]
 }
 
+```
+
+## Generate Psuedo-Random String Seeded By UTC time
+```json
+{
+    "parameters": {
+        "randomSeed" : {
+            "type" : "string",
+            "defaultValue" : "[utcNow()]"
+        }
+    },
+    "variables": {
+        "pass": {
+            "value": "[concat('FT12!', substring(uniqueString(parameters('randomSeed')),0,7))]"
+        }
+    }
+}
 ```
