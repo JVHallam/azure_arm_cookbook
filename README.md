@@ -84,3 +84,47 @@
     }
 }
 ```
+
+## Azure Container Images ( ACI ) - Echo Container
+```json
+{
+    "type": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2021-09-01",
+    "name": "echo",
+    "location": "[resourceGroup().location]",
+    "properties": {
+        "sku": "Standard",
+        "containers": [
+            {
+                "name": "echo",
+                "properties": {
+                    "image": "ealen/echo-server",
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 80
+                        }
+                    ],
+                    "resources": {
+                        "requests": {
+                            "memoryInGB": 1,
+                            "cpu": 1
+                        }
+                    }
+                }
+            }
+        ],
+        "restartPolicy": "OnFailure",
+        "ipAddress": {
+            "ports": [
+                {
+                    "protocol": "TCP",
+                    "port": 80
+                }
+            ],
+            "type": "Public"
+        },
+        "osType": "Linux"
+    }
+}
+```
