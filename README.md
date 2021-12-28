@@ -128,3 +128,20 @@
     }
 }
 ```
+
+# ACR - Azure Container Registry Base resource
+```json
+{
+    "name": "kataacrregtest",
+    "type": "Microsoft.ContainerRegistry/registries",
+    "location": "[resourceGroup().location]",
+    "apiVersion": "2020-11-01-preview",
+    "sku": {
+        "name": "Basic"
+    },
+    "properties": {
+        "publicNetworkAccess": "Enabled",
+        "zoneRedundancy": "disabled"
+    }
+}
+```
